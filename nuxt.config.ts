@@ -16,7 +16,6 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/']
     },
-    preset: 'netlify'
   },
   app: {
     head: {
