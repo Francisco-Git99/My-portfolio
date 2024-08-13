@@ -56,7 +56,12 @@ export default defineNuxtConfig({
       ],
       htmlAttrs: {
         lang: 'es'
-      }
+      },
+      meta: [
+        {
+          name: 'description', content: 'Descubre el portafolio de Francisco, un apasionado desarrollador web con experiencia en la creación de sitios personalizados y funcionales. Explora mis proyectos, conoce mi trayectoria y contacta para transformar tus ideas en una página web atractiva y efectiva.'
+        }
+      ]
     }
   }
 })
