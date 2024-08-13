@@ -53,7 +53,10 @@ export default defineNuxtConfig({
       ],
       link: [
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/nuxt-icon.png' }
-      ]
+      ],
+      htmlAttrs: {
+        lang: 'es'
+      }
     }
   }
 })
