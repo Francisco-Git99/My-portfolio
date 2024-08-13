@@ -163,7 +163,7 @@
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .content {
         padding-left: 1em;
         padding-right: 1em;
