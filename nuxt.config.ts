@@ -1,4 +1,7 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+import { submitURL } from './server/indexNow';
+import type { Nitro } from 'nitropack'
+
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
@@ -63,5 +66,14 @@ export default defineNuxtConfig({
         }
       ]
     }
+  },
+  hooks: {
+    'nitro:init': (nitro: Nitro) => {
+      nitro.hooks.hook('prerender:route', async (route: any) => {
+        const path = typeof route === 'string' ? route : route.route;
+        const fullUrl = `https://portfolio-francisco.netlify.app${path}`;
+        await submitURL(fullUrl);
+      });
+    }
   }
-})
+});
