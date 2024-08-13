@@ -19,6 +19,38 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
+      script: [
+        {
+          hid: 'schema',
+          type: 'application/ld+json',
+          innerHTML: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Francisco",
+            "jobTitle": "Freelancer Developer Web",
+            "worksFor": "",
+            "alumniOf": "",
+            "award": "",
+            "birthDate": "1999-08-07",
+            "gender": "Male",
+            "knowsAbout": [
+              "web design",
+              "web programming"
+            ],
+            "knowsLanguage": [
+              "Spanish"
+            ],
+            "nationality": "Argentina",
+            "image": "",
+            "url": "https://portfolio-francisco.netlify.app/",
+            "sameAs": [
+              "",
+              "",
+              ""
+            ]
+          })
+        }
+      ],
       link: [
         { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/nuxt-icon.png' }
       ]
